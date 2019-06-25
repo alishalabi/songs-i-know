@@ -12,7 +12,9 @@ SKILL_CHOICES = (
 
 class Song(models.Model):
     song_name = models.CharField(max_length=200)
-    youtube_url = models.CharField(max_length=300, blank=True, default='')
+    artist = models.CharField(max_length=200)
+    youtube_tutorial = models.CharField(
+        max_length=300, blank=True, default='')
     song_tab = models.CharField(max_length=100, blank=True, default='')
     lyrics = models.CharField(max_length=2000, blank=True, default='')
     skill_level = models.CharField(
