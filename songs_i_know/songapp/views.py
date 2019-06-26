@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
 
 from .models import Song
@@ -16,4 +16,5 @@ def index(request):
 
 
 def detail(request, song_id):
-    return HttpResponse("You're looking at song %s." % song_id)
+    song = get_object_or_404(Song, pk=song_id)
+    return render(request, 'songapp/detail.html', {'song': song})

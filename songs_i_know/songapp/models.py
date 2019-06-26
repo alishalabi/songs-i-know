@@ -1,10 +1,10 @@
 from django.db import models
 
 EXPERIENCE_CHOICES = (
-    ('novice', 'Novice'),
-    ('intermediate', 'Intermediate'),
-    ('advanced', 'Advanced'),
-    ('black_belt', 'Black Belt'),
+    ('Novice', 'Novice'),
+    ('Intermediate', 'Intermediate'),
+    ('Advanced', 'Advanced'),
+    ('Black_Belt', 'Black Belt'),
 )
 
 # Create your models here.
