@@ -1,7 +1,14 @@
-from django.urls import path
-from .views import SongList, SongDetail
+from django.conf.urls import url
+from django.urls import path, include
+from .views import SongListViewSet  # , SongDetail
+from rest_framework import routers
+
+router = routers.DefaultRouter()
+
+router.register(r'list', SongListViewSet, basename='songs')
+# router.register(r'detail', SongDetail)
+
 
 urlpatterns = [
-    path("api/", SongList.as_view(), name="song_list"),
-    path("api/<int:pk>/", SongDetail.as_view(), name="song_detail"),
+    url(r'', include(router.urls)),
 ]
