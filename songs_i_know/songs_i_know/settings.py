@@ -39,7 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'songapp.apps.SongappConfig',
-    'accounts.apps.AccountsConfig',
+    'accounts.apps.AccountsConfig',  # Not yet fully implemented
+    'api.apps.ApiConfig',
+
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
